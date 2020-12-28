@@ -1,5 +1,5 @@
 # skyworld
-A skyblock like word generator plugin for minecraft with more islands and random loot. With this plugin you progress a lot faster than in real skyblock but it's also more action packed that regular skyblock. It'S especially funny if you lay with friends.
+A skyblock like word generator plugin for minecraft with more islands and random loot. With this plugin you progress a lot faster than in real skyblock but it's also more action packed that regular skyblock. It's especially funny if you play with friends.
 
 ---
 **Note:** 
