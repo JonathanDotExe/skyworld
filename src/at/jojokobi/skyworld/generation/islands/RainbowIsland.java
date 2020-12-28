@@ -75,7 +75,7 @@ public class RainbowIsland extends Island {
 		chestInventory.addItem(new ItemStack (Material.ORANGE_DYE, 2));
 		chestInventory.addItem(new ItemStack (Material.MAGENTA_DYE, 2));
 		chestInventory.addItem(new ItemStack (Material.LIGHT_BLUE_DYE, 2));
-		chestInventory.addItem(new ItemStack (Material.DANDELION_YELLOW, 2));
+		chestInventory.addItem(new ItemStack (Material.YELLOW_DYE, 2));
 		chestInventory.addItem(new ItemStack (Material.LIME_DYE, 2));
 		chestInventory.addItem(new ItemStack (Material.PINK_DYE, 2));
 		chestInventory.addItem(new ItemStack (Material.GRAY_DYE, 2));
@@ -84,8 +84,8 @@ public class RainbowIsland extends Island {
 		chestInventory.addItem(new ItemStack (Material.PURPLE_DYE, 2));
 		chestInventory.addItem(new ItemStack (Material.LAPIS_LAZULI, 2));
 		chestInventory.addItem(new ItemStack (Material.COCOA_BEANS, 2));
-		chestInventory.addItem(new ItemStack (Material.CACTUS_GREEN, 2));
-		chestInventory.addItem(new ItemStack (Material.ROSE_RED, 2));
+		chestInventory.addItem(new ItemStack (Material.GREEN_DYE, 2));
+		chestInventory.addItem(new ItemStack (Material.RED_DYE, 2));
 		chestInventory.addItem(new ItemStack (Material.INK_SAC, 2));
 		chestInventory.addItem(new ItemStack (Material.SHEEP_SPAWN_EGG, 2));
 	}

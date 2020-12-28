@@ -28,7 +28,7 @@ public class NetherFortressIsland extends Island {
 		place.setZ(place.getZ() + 3);
 		place.getBlock().setType(Material.SPAWNER);
 		CreatureSpawner spawner1 = (CreatureSpawner) place.getBlock().getState();
-		spawner1.setSpawnedType(EntityType.PIG_ZOMBIE);
+		spawner1.setSpawnedType(EntityType.ZOMBIFIED_PIGLIN);
 		spawner1.update();
 		place.setX(place.getX() - 4);
 		place.setZ(place.getZ() - 4);
