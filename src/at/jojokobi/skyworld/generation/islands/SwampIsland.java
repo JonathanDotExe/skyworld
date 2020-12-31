@@ -19,7 +19,7 @@ public class SwampIsland extends Island {
 		place.setY(place.getY() - 16);
 		place.setX(place.getX() - 16);
 		place.setZ(place.getZ() - 16);
-		BasicGeneration.GenerateBiome(place.clone(), Biome.SWAMP, 32, 32, 32);
+		BasicGeneration.generateBiome(place.clone(), Biome.SWAMP, 32, 32, 32);
 		place.setY(place.getY() + 16);
 		place.setX(place.getX() + 16);
 		place.setZ(place.getZ() + 16);
@@ -27,15 +27,15 @@ public class SwampIsland extends Island {
 		place.setY(place.getY() + 1);
 		place.setX(place.getX() - 1);
 		place.setZ(place.getZ() - 1);
-		BasicGeneration.GenerateCube(place.clone(), Material.DIRT, 3, 3, 1);
+		BasicGeneration.generateCube(place.clone(), Material.DIRT, 3, 3, 1);
 		place.setY(place.getY() + 1);
 		place.setX(place.getX() - 1);
 		place.setZ(place.getZ() - 1);
-		BasicGeneration.GenerateCube(place.clone(), Material.DIRT, 5, 5, 1);
+		BasicGeneration.generateCube(place.clone(), Material.DIRT, 5, 5, 1);
 		place.setY(place.getY() + 1);
 		place.setX(place.getX() - 1);
 		place.setZ(place.getZ() - 1);
-		BasicGeneration.GenerateCube(place.clone(), Material.GRASS_BLOCK, 7, 7, 1);
+		BasicGeneration.generateCube(place.clone(), Material.GRASS_BLOCK, 7, 7, 1);
 		place.setY(place.getY() + 1);
 		place.setX(place.getX() + 3);
 		place.setZ(place.getZ() + 3);

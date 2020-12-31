@@ -22,16 +22,16 @@ public class MiniDungeonIsland extends Island {
 		place.setY(place.getY() - 16);
 		place.setX(place.getX() - 16);
 		place.setZ(place.getZ() - 16);
-		BasicGeneration.GenerateBiome(place.clone(), Biome.MOUNTAINS, 32, 32, 32);
+		BasicGeneration.generateBiome(place.clone(), Biome.MOUNTAINS, 32, 32, 32);
 		place.setY(place.getY() + 16);
 		place.setX(place.getX() + 16);
 		place.setZ(place.getZ() + 16);
-		BasicGeneration.GenerateCube(place.clone(), Material.COBBLESTONE, 8, 8, 1);
-		BasicGeneration.GenerateDungeon(place.clone(), Material.COBBLESTONE, 8, 8, 8);
+		BasicGeneration.generateCube(place.clone(), Material.COBBLESTONE, 8, 8, 1);
+		BasicGeneration.generateDungeon(place.clone(), Material.COBBLESTONE, 8, 8, 8);
 		place.setY(place.getY() + 1);
 		place.setX(place.getX() + 1);
 		place.setZ(place.getZ() + 1);
-		BasicGeneration.GenerateCube(place.clone(), Material.AIR, 6, 6, 7);
+		BasicGeneration.generateCube(place.clone(), Material.AIR, 6, 6, 7);
 		place.getBlock().setType(Material.CHEST);
 		if (spawnIsland)
 			generateChest(place);

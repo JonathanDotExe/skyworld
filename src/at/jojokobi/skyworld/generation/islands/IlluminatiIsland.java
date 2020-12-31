@@ -17,19 +17,19 @@ public class IlluminatiIsland extends Island {
 
 	@Override
 	public void build(Location place) {
-		BasicGeneration.GenerateCube(place.clone(), Material.GREEN_WOOL, 9, 1, 1);
+		BasicGeneration.generateCube(place.clone(), Material.GREEN_WOOL, 9, 1, 1);
 		place.setX(place.getX() + 1);
 		place.setZ(place.getZ() + 1);
-		BasicGeneration.GenerateCube(place.clone(), Material.GREEN_WOOL, 7, 2, 1);
+		BasicGeneration.generateCube(place.clone(), Material.GREEN_WOOL, 7, 2, 1);
 		place.setX(place.getX() + 1);
 		place.setZ(place.getZ() + 2);
-		BasicGeneration.GenerateCube(place.clone(), Material.GREEN_WOOL, 5, 1, 1);
+		BasicGeneration.generateCube(place.clone(), Material.GREEN_WOOL, 5, 1, 1);
 		place.setX(place.getX() + 1);
 		place.setZ(place.getZ() + 1);
-		BasicGeneration.GenerateCube(place.clone(), Material.GREEN_WOOL, 3, 2, 1);
+		BasicGeneration.generateCube(place.clone(), Material.GREEN_WOOL, 3, 2, 1);
 		place.setX(place.getX() + 1);
 		place.setZ(place.getZ() + 2);
-		BasicGeneration.GenerateCube(place.clone(), Material.GREEN_WOOL, 1, 2, 1);
+		BasicGeneration.generateCube(place.clone(), Material.GREEN_WOOL, 1, 2, 1);
 		place.setZ(place.getZ() - 5);
 		place.getBlock().setType(Material.SPAWNER);
 		CreatureSpawner spawner = (CreatureSpawner) place.getBlock().getState();
@@ -37,7 +37,7 @@ public class IlluminatiIsland extends Island {
 		spawner.update();
 		place.setY(place.getY() + 1);
 		place.setX(place.getX() - 1);
-		BasicGeneration.GenerateCube(place.clone(), Material.WHITE_WOOL, 3, 2, 1);
+		BasicGeneration.generateCube(place.clone(), Material.WHITE_WOOL, 3, 2, 1);
 		place.setX(place.getX() + 1);
 		place.getBlock().setType(Material.BLACK_WOOL);
 		place.setZ(place.getZ() + 1);

@@ -16,9 +16,9 @@ public class NetherrackIsland extends Island {
 
 	@Override
 	public void build(Location place) {
-		BasicGeneration.GenerateCube(place.clone(), Material.NETHERRACK, 3, 3, 2);
+		BasicGeneration.generateCube(place.clone(), Material.NETHERRACK, 3, 3, 2);
 		place.setY(place.getY() + 2);
-		BasicGeneration.GenerateCube(place.clone(), Material.SOUL_SAND, 3, 3, 1);
+		BasicGeneration.generateCube(place.clone(), Material.SOUL_SAND, 3, 3, 1);
 		place.setY(place.getY() + 1);
 		place.setX(place.getX() + 1);
 		place.setZ(place.getZ() + 1);

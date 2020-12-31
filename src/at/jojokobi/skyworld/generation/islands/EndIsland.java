@@ -16,9 +16,9 @@ public class EndIsland extends Island {
 
 	@Override
 	public void build(Location place) {
-		BasicGeneration.GenerateCube(place.clone(), Material.END_STONE, 3, 3, 2);
+		BasicGeneration.generateCube(place.clone(), Material.END_STONE, 3, 3, 2);
 		place.setY(place.getY() + 2);
-		BasicGeneration.GenerateCube(place.clone(), Material.OBSIDIAN, 3, 3, 1);
+		BasicGeneration.generateCube(place.clone(), Material.OBSIDIAN, 3, 3, 1);
 		place.setY(place.getY() + 1);
 		place.setX(place.getX() + 1);
 		place.setZ(place.getZ() + 1);

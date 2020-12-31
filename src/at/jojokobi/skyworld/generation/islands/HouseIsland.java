@@ -21,16 +21,16 @@ public class HouseIsland extends Island {
 		place.setY(place.getY() - 16);
 		place.setX(place.getX() - 16);
 		place.setZ(place.getZ() - 16);
-		BasicGeneration.GenerateBiome(place.clone(), Biome.PLAINS, 32, 32, 32);
+		BasicGeneration.generateBiome(place.clone(), Biome.PLAINS, 32, 32, 32);
 		place.setY(place.getY() + 16);
 		place.setX(place.getX() + 16);
 		place.setZ(place.getZ() + 16);
-		BasicGeneration.GenerateCube(place.clone(), Material.COBBLESTONE, 6, 6, 1);
+		BasicGeneration.generateCube(place.clone(), Material.COBBLESTONE, 6, 6, 1);
 		place.setY(place.getY() + 1);
-		BasicGeneration.GenerateCube(place.clone(), Material.OAK_PLANKS, 6, 6, 3);
+		BasicGeneration.generateCube(place.clone(), Material.OAK_PLANKS, 6, 6, 3);
 		place.setX(place.getX() + 1);
 		place.setZ(place.getZ() + 1);
-		BasicGeneration.GenerateCube(place.clone(), Material.AIR, 4, 4, 3);
+		BasicGeneration.generateCube(place.clone(), Material.AIR, 4, 4, 3);
 		place.setX(place.getX() + 2);
 		place.getBlock().setType(Material.CHEST);
 		Chest chest = (Chest) place.getBlock().getState();
@@ -41,11 +41,11 @@ public class HouseIsland extends Island {
 		place.setX(place.getX() + 1);
 		place.getBlock().setType(Material.CRAFTING_TABLE);
 		place.setX(place.getX() - 4);
-		BasicGeneration.GenerateCube(place.clone(), Material.AIR, 1, 1, 2);
+		BasicGeneration.generateCube(place.clone(), Material.AIR, 1, 1, 2);
 		place.getBlock().setType(Material.OAK_DOOR);
 		place.setZ(place.getZ() - 1);
 		place.setY(place.getY() + 3);
-		BasicGeneration.GenerateCube(place.clone(), Material.COBBLESTONE, 6, 6, 1);
+		BasicGeneration.generateCube(place.clone(), Material.COBBLESTONE, 6, 6, 1);
 		chest.getInventory().addItem(new ItemStack (Material.VILLAGER_SPAWN_EGG, 1));
 	}
 	

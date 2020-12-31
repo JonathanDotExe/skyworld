@@ -15,12 +15,12 @@ public class EnderPortalIsland extends Island{
 
 	@Override
 	public void build(Location place) {
-		BasicGeneration.GenerateCube(place.clone(), Material.END_STONE_BRICKS, 8, 8, 8);
-		BasicGeneration.GenerateDungeon(place.clone(), Material.END_STONE_BRICKS, 8, 8, 8);
+		BasicGeneration.generateCube(place.clone(), Material.END_STONE_BRICKS, 8, 8, 8);
+		BasicGeneration.generateDungeon(place.clone(), Material.END_STONE_BRICKS, 8, 8, 8);
 		place.setY(place.getY() + 1);
 		place.setX(place.getX() + 1);
 		place.setZ(place.getZ() + 1);
-		BasicGeneration.GenerateCube(place.clone(), Material.AIR, 6, 6, 6);
+		BasicGeneration.generateCube(place.clone(), Material.AIR, 6, 6, 6);
 		place.getBlock().setType(Material.SPAWNER);
 		CreatureSpawner spawner = (CreatureSpawner) place.getBlock().getState();
 		spawner.setSpawnedType(EntityType.ENDERMAN);
@@ -28,7 +28,7 @@ public class EnderPortalIsland extends Island{
 		place.setY(place.getY() - 1);
 		place.setX(place.getX() + 1);
 		place.setZ(place.getZ() + 1);
-		BasicGeneration.GenerateCube(place.clone(), Material.END_PORTAL, 4, 4, 1);
+		BasicGeneration.generateCube(place.clone(), Material.END_PORTAL, 4, 4, 1);
 	}
 
 }

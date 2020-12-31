@@ -17,11 +17,11 @@ public class NetherFortressIsland extends Island {
 
 	public void build(Location place) {
 		//
-		BasicGeneration.GenerateNetherFortress(place.clone(), Material.NETHERRACK, 8, 8, 8);
+		BasicGeneration.generateNetherFortress(place.clone(), Material.NETHERRACK, 8, 8, 8);
 		place.setY(place.getY() + 1);
 		place.setX(place.getX() + 1);
 		place.setZ(place.getZ() + 1);
-		BasicGeneration.GenerateCube(place.clone(), Material.AIR, 6, 6, 7);
+		BasicGeneration.generateCube(place.clone(), Material.AIR, 6, 6, 7);
 		place.getBlock().setType(Material.CHEST);
 		ChestGenerator.lootNetherFortress((Chest) place.getBlock().getState());
 		place.setX(place.getX() + 3);
@@ -34,11 +34,11 @@ public class NetherFortressIsland extends Island {
 		place.setZ(place.getZ() - 4);
 		place.setY(place.getY() + 7);
 		//
-		BasicGeneration.GenerateNetherFortress(place.clone(), Material.NETHERRACK, 8, 8, 8);
+		BasicGeneration.generateNetherFortress(place.clone(), Material.NETHERRACK, 8, 8, 8);
 		place.setY(place.getY() + 1);
 		place.setX(place.getX() + 1);
 		place.setZ(place.getZ() + 1);
-		BasicGeneration.GenerateCube(place.clone(), Material.AIR, 6, 6, 7);
+		BasicGeneration.generateCube(place.clone(), Material.AIR, 6, 6, 7);
 		place.getBlock().setType(Material.CHEST);
 		ChestGenerator.lootNetherFortress((Chest) place.getBlock().getState());
 		ChestGenerator.lootNether((Chest) place.getBlock().getState());
@@ -52,11 +52,11 @@ public class NetherFortressIsland extends Island {
 		place.setZ(place.getZ() - 4);
 		place.setY(place.getY() + 7);
 		//
-		BasicGeneration.GenerateNetherFortress(place.clone(), Material.NETHERRACK, 8, 8, 8);
+		BasicGeneration.generateNetherFortress(place.clone(), Material.NETHERRACK, 8, 8, 8);
 		place.setY(place.getY() + 1);
 		place.setX(place.getX() + 1);
 		place.setZ(place.getZ() + 1);
-		BasicGeneration.GenerateCube(place.clone(), Material.AIR, 6, 6, 7);
+		BasicGeneration.generateCube(place.clone(), Material.AIR, 6, 6, 7);
 		place.getBlock().setType(Material.CHEST);
 		ChestGenerator.lootNetherFortress((Chest) place.getBlock().getState());
 		ChestGenerator.lootNetherFortress((Chest) place.getBlock().getState());

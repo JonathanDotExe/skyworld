@@ -22,16 +22,16 @@ public class SandIsland extends Island {
 		place.setX(place.getX() - 16);
 		place.setZ(place.getZ() - 16);
 		if (spawnIsland)
-			BasicGeneration.GenerateBiome(place.clone(), Biome.BEACH, 32, 32, 32);
+			BasicGeneration.generateBiome(place.clone(), Biome.BEACH, 32, 32, 32);
 		else
-			BasicGeneration.GenerateBiome(place.clone(), Biome.DESERT, 32, 32, 32);
+			BasicGeneration.generateBiome(place.clone(), Biome.DESERT, 32, 32, 32);
 		place.setY(place.getY() + 16);
 		place.setX(place.getX() + 16);
 		place.setZ(place.getZ() + 16);
 		place.setY(place.getY() - 1);
-		BasicGeneration.GenerateCube(place.clone(), Material.SANDSTONE, 3, 3, 1);
+		BasicGeneration.generateCube(place.clone(), Material.SANDSTONE, 3, 3, 1);
 		place.setY(place.getY() + 1);
-		BasicGeneration.GenerateCube(place.clone(), Material.SAND, 3, 3, 3);
+		BasicGeneration.generateCube(place.clone(), Material.SAND, 3, 3, 3);
 		place.setY(place.getY() + 3);
 		place.getBlock().setType(Material.CACTUS);
 		place.setX(place.getX() + 2);

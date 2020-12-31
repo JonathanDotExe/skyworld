@@ -7,7 +7,7 @@ import java.util.Random;
 
 public class BasicGeneration {
 	
-	public static void GenerateCube(Location place, Material block, int length, int width, int height){
+	public static void generateCube(Location place, Material block, int length, int width, int height){
 		int startX = (int) place.getX();
 		int startY = (int) place.getY();
 		int startZ = (int) place.getZ();
@@ -24,7 +24,7 @@ public class BasicGeneration {
 		}
 	}
 	
-	public static void GenerateCube(Location place, Material block, int length, int width, int height, byte metadata){
+	public static void generateCube(Location place, Material block, int length, int width, int height, byte metadata){
 		int startX = (int) place.getX();
 		int startY = (int) place.getY();
 		int startZ = (int) place.getZ();
@@ -40,7 +40,7 @@ public class BasicGeneration {
 			}
 		}
 	}
-	public static void GenerateOres(Location place, Material block, int length, int width, int height){
+	public static void generateOres(Location place, Material block, int length, int width, int height){
 		int startX = (int) place.getX();
 		int startY = (int) place.getY();
 		int startZ = (int) place.getZ();
@@ -93,7 +93,7 @@ public class BasicGeneration {
 			}
 		}
 	}
-	public static void GenerateDungeon(Location place, Material block, int length, int width, int height){
+	public static void generateDungeon(Location place, Material block, int length, int width, int height){
 		int startX = (int) place.getX();
 		int startY = (int) place.getY();
 		int startZ = (int) place.getZ();
@@ -117,7 +117,7 @@ public class BasicGeneration {
 		}
 	}
 	
-	public static void GenerateNetherFortress(Location place, Material block, int length, int width, int height){
+	public static void generateNetherFortress(Location place, Material block, int length, int width, int height){
 		int startX = (int) place.getX();
 		int startY = (int) place.getY();
 		int startZ = (int) place.getZ();
@@ -144,7 +144,7 @@ public class BasicGeneration {
 		}
 	}
 	
-	public static void GenerateEndDungeon(Location place, Material block, int length, int width, int height){
+	public static void generateEndDungeon(Location place, Material block, int length, int width, int height){
 		int startX = (int) place.getX();
 		int startY = (int) place.getY();
 		int startZ = (int) place.getZ();
@@ -171,7 +171,7 @@ public class BasicGeneration {
 		}
 	}
 	
-	public static void GenerateBiome(Location place, Biome biome, int length, int width, int height){
+	public static void generateBiome(Location place, Biome biome, int length, int width, int height){
 		int startX = (int) place.getX();
 		int startY = (int) place.getY();
 		int startZ = (int) place.getZ();

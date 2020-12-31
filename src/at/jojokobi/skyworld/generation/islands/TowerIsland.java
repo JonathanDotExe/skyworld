@@ -26,17 +26,17 @@ public class TowerIsland extends Island {
 		place.setY(place.getY() - 16);
 		place.setX(place.getX() - 16);
 		place.setZ(place.getZ() - 16);
-		BasicGeneration.GenerateBiome(place.clone(), Biome.MOUNTAINS, 32, 64, 32);
+		BasicGeneration.generateBiome(place.clone(), Biome.MOUNTAINS, 32, 64, 32);
 		place.setY(place.getY() + 16);
 		place.setX(place.getX() + 16);
 		place.setZ(place.getZ() + 16);
 		//Stockwerk 1
-		BasicGeneration.GenerateCube(place.clone(), Material.COBBLESTONE, 8, 8, 8);
-		BasicGeneration.GenerateDungeon(place.clone(), Material.COBBLESTONE, 8, 8, 8);
+		BasicGeneration.generateCube(place.clone(), Material.COBBLESTONE, 8, 8, 8);
+		BasicGeneration.generateDungeon(place.clone(), Material.COBBLESTONE, 8, 8, 8);
 		place.setY(place.getY() + 1);
 		place.setX(place.getX() + 1);
 		place.setZ(place.getZ() + 1);
-		BasicGeneration.GenerateCube(place.clone(), Material.AIR, 6, 6, 7);
+		BasicGeneration.generateCube(place.clone(), Material.AIR, 6, 6, 7);
 		place.getBlock().setType(Material.CHEST);
 		ChestGenerator.lootDungeon((Chest) place.getBlock().getState());
 		ChestGenerator.lootDungeon((Chest) place.getBlock().getState());
@@ -50,12 +50,12 @@ public class TowerIsland extends Island {
 		place.setZ(place.getZ() - 4);
 		place.setY(place.getY() + 7);
 		//Stockwerk 2
-		BasicGeneration.GenerateCube(place.clone(), Material.COBBLESTONE, 8, 8, 8);
-		BasicGeneration.GenerateDungeon(place.clone(), Material.COBBLESTONE, 8, 8, 8);
+		BasicGeneration.generateCube(place.clone(), Material.COBBLESTONE, 8, 8, 8);
+		BasicGeneration.generateDungeon(place.clone(), Material.COBBLESTONE, 8, 8, 8);
 		place.setY(place.getY() + 1);
 		place.setX(place.getX() + 1);
 		place.setZ(place.getZ() + 1);
-		BasicGeneration.GenerateCube(place.clone(), Material.AIR, 6, 6, 7);
+		BasicGeneration.generateCube(place.clone(), Material.AIR, 6, 6, 7);
 		place.getBlock().setType(Material.CHEST);
 		ChestGenerator.lootVillage((Chest) place.getBlock().getState());
 		ChestGenerator.lootVillage((Chest) place.getBlock().getState());
@@ -69,12 +69,12 @@ public class TowerIsland extends Island {
 		place.setZ(place.getZ() - 4);
 		place.setY(place.getY() + 7);
 		//Stockwerk 3
-		BasicGeneration.GenerateCube(place.clone(), Material.COBBLESTONE, 8, 8, 8);
-		BasicGeneration.GenerateDungeon(place.clone(), Material.SPAWNER, 8, 8, 8);
+		BasicGeneration.generateCube(place.clone(), Material.COBBLESTONE, 8, 8, 8);
+		BasicGeneration.generateDungeon(place.clone(), Material.SPAWNER, 8, 8, 8);
 		place.setY(place.getY() + 1);
 		place.setX(place.getX() + 1);
 		place.setZ(place.getZ() + 1);
-		BasicGeneration.GenerateCube(place.clone(), Material.AIR, 6, 6, 7);
+		BasicGeneration.generateCube(place.clone(), Material.AIR, 6, 6, 7);
 		place.getBlock().setType(Material.CHEST);
 		ChestGenerator.lootRandom((Chest) place.getBlock().getState());
 		ChestGenerator.lootRandom((Chest) place.getBlock().getState());
@@ -88,12 +88,12 @@ public class TowerIsland extends Island {
 		place.setZ(place.getZ() - 4);
 		place.setY(place.getY() + 7);
 		//Stockwerk 4
-		BasicGeneration.GenerateCube(place.clone(), Material.COBBLESTONE, 8, 8, 8);
-		BasicGeneration.GenerateDungeon(place.clone(), Material.COBBLESTONE, 8, 8, 8);
+		BasicGeneration.generateCube(place.clone(), Material.COBBLESTONE, 8, 8, 8);
+		BasicGeneration.generateDungeon(place.clone(), Material.COBBLESTONE, 8, 8, 8);
 		place.setY(place.getY() + 1);
 		place.setX(place.getX() + 1);
 		place.setZ(place.getZ() + 1);
-		BasicGeneration.GenerateCube(place.clone(), Material.AIR, 6, 6, 7);
+		BasicGeneration.generateCube(place.clone(), Material.AIR, 6, 6, 7);
 		place.getBlock().setType(Material.CHEST);
 		ChestGenerator.lootRandom((Chest) place.getBlock().getState());
 		ChestGenerator.lootRandom((Chest) place.getBlock().getState());
@@ -107,12 +107,12 @@ public class TowerIsland extends Island {
 		place.setZ(place.getZ() - 4);
 		place.setY(place.getY() + 7);
 		//Stockwerk 5
-		BasicGeneration.GenerateCube(place.clone(), Material.COBBLESTONE, 8, 8, 8);
-		BasicGeneration.GenerateDungeon(place.clone(), Material.COBBLESTONE, 8, 8, 8);
+		BasicGeneration.generateCube(place.clone(), Material.COBBLESTONE, 8, 8, 8);
+		BasicGeneration.generateDungeon(place.clone(), Material.COBBLESTONE, 8, 8, 8);
 		place.setY(place.getY() + 1);
 		place.setX(place.getX() + 1);
 		place.setZ(place.getZ() + 1);
-		BasicGeneration.GenerateCube(place.clone(), Material.AIR, 6, 6, 7);
+		BasicGeneration.generateCube(place.clone(), Material.AIR, 6, 6, 7);
 		place.getBlock().setType(Material.CHEST);
 		ChestGenerator.lootSuperRandom((Chest) place.getBlock().getState());
 		ChestGenerator.lootSuperRandom((Chest) place.getBlock().getState());
