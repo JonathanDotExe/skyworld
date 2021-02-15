@@ -73,19 +73,19 @@ public class SkyWorldPlugin extends JavaPlugin{
 		//Overworld
 		WorldCreator generator = new WorldCreator("skyworld");
 		generator.type(WorldType.FLAT);
-		generator.generatorSettings("{\"biome\":\"minecraft:ocean\", \"layers\":[{\"block\":\"minecraft:air\", \"height\":1}]}");
+		generator.generatorSettings("{\"structures\":{\"structures\":{}}, \"biome\":\"minecraft:ocean\", \"layers\":[{\"block\":\"minecraft:air\", \"height\":1}]}");
 		skyWorld = this.getServer().createWorld(generator);
 		skyWorld.setSpawnLocation(64, 70, 0);
 		//Nether
 		WorldCreator netherGenerator = new WorldCreator("skynether");
 		netherGenerator.type(WorldType.FLAT);
-		netherGenerator.generatorSettings("{\"biome\":\"minecraft:nether\", \"layers\":[{\"block\":\"minecraft:air\", \"height\":1}]}");
+		netherGenerator.generatorSettings("{\"structures\":{\"structures\":{}}, \"biome\":\"minecraft:nether\", \"layers\":[{\"block\":\"minecraft:air\", \"height\":1}]}");
 		skyNether = this.getServer().createWorld(netherGenerator);
 		skyNether.setSpawnLocation(0, 70, 0);
 		//End
 		WorldCreator endGenerator = new WorldCreator("skyend");
 		endGenerator.type(WorldType.FLAT);
-		endGenerator.generatorSettings("{\"biome\":\"minecraft:the_end\", \"layers\":[{\"block\":\"minecraft:air\", \"height\":1}]}");
+		endGenerator.generatorSettings("{\"structures\":{\"structures\":{}}, \"biome\":\"minecraft:the_end\", \"layers\":[{\"block\":\"minecraft:air\", \"height\":1}]}");
 		skyEnd = this.getServer().createWorld(endGenerator);
 		skyEnd.setSpawnLocation(0, 70, 0);
 	}
@@ -97,6 +97,7 @@ public class SkyWorldPlugin extends JavaPlugin{
 					islands[i].build(locations[i]);
 				}
 				catch(Exception e){
+					e.printStackTrace();
 					System.out.println("[SkyWorld]: Generation Error!");
 				}
 			}
