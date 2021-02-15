@@ -1,16 +1,8 @@
 package at.jojokobi.skyworld;
 
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
-
-import org.bukkit.Location;
 import org.bukkit.World;
 import org.bukkit.WorldCreator;
 import org.bukkit.plugin.java.JavaPlugin;
-import at.jojokobi.skyworld.generation.islands.*;
 import at.jojokobi.skyworld.generation.SkyWorldOverworldGenerator;
 
 //{"biome":"minecraft:ocean", "layers":[{"block":"minecraft:air", "height":1}]}
@@ -19,31 +11,16 @@ import at.jojokobi.skyworld.generation.SkyWorldOverworldGenerator;
  */
 public class SkyWorldPlugin extends JavaPlugin{
 	
-	private Island[] islands;
-	private Location[] locations;
-	private Island middleIsland;
-	private Island netherIsland;
-	private Island endIsland;
-	private Island enderPortalIsland;
 	private World skyWorld;
 	private PlayerSpawnSetter spawner;
 	private SkyWorldOverworldGenerator gen = new SkyWorldOverworldGenerator();
 	
 	@Override
 	public void onEnable(){
-		loadBools();
 		generate();
 		spawner = new PlayerSpawnSetter(skyWorld);
 		getServer().getPluginManager().registerEvents(spawner, this);
-		//getServer().getPluginManager().registerEvents(new NetherSwitcher(skyWorld, skyNether, skyEnd), this);
 		spawner.load();
-		islands = new Island[] {new ClassicIsland(true), new RainbowIsland(true),  new ForestIsland(true),  new HouseIsland(true), new FarmIsland(true), new LlamaIsland(true), new MineIsland(true), new MiniDungeonIsland(true)};
-		locations = new Location[] {new Location(skyWorld, 64, 64, 0), new Location(skyWorld, 32, 64, 32), new Location(skyWorld, 0, 64, 64), new Location(skyWorld, -32, 64, 32), new Location(skyWorld, -64, 64, 0), new Location(skyWorld, -32, 64, -32), new Location(skyWorld, 0, 64, -64), new Location(skyWorld, 32, 64, -32)};
-		middleIsland = new SandIsland(true);
-		netherIsland = new NetherIsland(true);
-		endIsland = new EndIsland(true);
-		enderPortalIsland = new EnderPortalIsland(true);
-		generateSpawnIslands();
 	}
 	
 	@Override
@@ -54,51 +31,14 @@ public class SkyWorldPlugin extends JavaPlugin{
 		catch (Exception e) {
 			e.printStackTrace();
 		}
-		saveBools();
 	}
 	
 	private void generate(){
 		//Overworld
 		WorldCreator generator = new WorldCreator("skyworld");
 		generator.generator(gen);
-		//generator.type(WorldType.FLAT);
-		//generator.generatorSettings("{\"structures\":{\"structures\":{}}, \"biome\":\"minecraft:ocean\", \"layers\":[{\"block\":\"minecraft:air\", \"height\":1}]}");
 		skyWorld = this.getServer().createWorld(generator);
 		skyWorld.setSpawnLocation(64, 70, 0);
-		//Nether
-		/*WorldCreator netherGenerator = new WorldCreator("skynether");
-		netherGenerator.type(WorldType.FLAT);
-		netherGenerator.generatorSettings("{\"structures\":{\"structures\":{}}, \"biome\":\"minecraft:nether\", \"layers\":[{\"block\":\"minecraft:air\", \"height\":1}]}");
-		skyNether = this.getServer().createWorld(netherGenerator);
-		skyNether.setSpawnLocation(0, 70, 0);
-		//End
-		WorldCreator endGenerator = new WorldCreator("skyend");
-		endGenerator.type(WorldType.FLAT);
-		endGenerator.generatorSettings("{\"structures\":{\"structures\":{}}, \"biome\":\"minecraft:the_end\", \"layers\":[{\"block\":\"minecraft:air\", \"height\":1}]}");
-		skyEnd = this.getServer().createWorld(endGenerator);
-		skyEnd.setSpawnLocation(0, 70, 0);*/
-	}
-	
-	private void generateSpawnIslands(){
-		for (int i = 0; i < islands.length; i++){
-			try{
-				islands[i].build(locations[i]);
-			}
-			catch(Exception e){
-				e.printStackTrace();
-				System.out.println("[SkyWorld]: Generation Error!");
-			}
-		}
-		middleIsland.build(new Location(skyWorld, -1, 64, -1));
-		/*
-		if (!netherExists){
-			netherIsland.build(new Location(skyNether, -1, 64, -1));
-		}
-		
-		if (!endExists){
-			endIsland.build(new Location(skyEnd, -1, 64, -1));
-			enderPortalIsland.build(new Location(skyEnd, -4, 64, 64));
-		}*/
 	}
 	
 }

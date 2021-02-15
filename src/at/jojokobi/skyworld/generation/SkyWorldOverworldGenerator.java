@@ -3,6 +3,7 @@ package at.jojokobi.skyworld.generation;
 import org.bukkit.event.Listener;
 import org.bukkit.generator.BlockPopulator;
 import org.bukkit.generator.ChunkGenerator;
+
 import org.bukkit.World;
 import org.bukkit.World.Environment;
 import org.bukkit.block.Biome;
@@ -15,6 +16,10 @@ import java.util.Random;
 public class SkyWorldOverworldGenerator extends ChunkGenerator implements Listener{
 	
 	public static final int CHUNK_SIZE = 16;
+	
+	public SkyWorldOverworldGenerator() {
+		
+	}
 	
 	@Override
 	public ChunkData generateChunkData(World world, Random random, int x, int z, BiomeGrid biome) {
