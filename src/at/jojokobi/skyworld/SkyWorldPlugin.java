@@ -12,7 +12,7 @@ import org.bukkit.WorldCreator;
 import org.bukkit.WorldType;
 import org.bukkit.plugin.java.JavaPlugin;
 import at.jojokobi.skyworld.generation.islands.*;
-import at.jojokobi.skyworld.generation.IslandGenerator;
+import at.jojokobi.skyworld.generation.SkyWorldOverworldGenerator;
 
 //{"biome":"minecraft:ocean", "layers":[{"block":"minecraft:air", "height":1}]}
 /*
@@ -47,7 +47,7 @@ public class SkyWorldPlugin extends JavaPlugin{
 		spawner = new PlayerSpawnSetter(skyWorld);
 		getServer().getPluginManager().registerEvents(spawner, this);
 		getServer().getPluginManager().registerEvents(new NetherSwitcher(skyWorld, skyNether, skyEnd), this);
-		getServer().getPluginManager().registerEvents(new IslandGenerator(), this);
+		getServer().getPluginManager().registerEvents(new SkyWorldOverworldGenerator(), this);
 		spawner.load();
 		islands = new Island[] {new ClassicIsland(true), new RainbowIsland(true),  new ForestIsland(true),  new HouseIsland(true), new FarmIsland(true), new LlamaIsland(true), new MineIsland(true), new MiniDungeonIsland(true)};
 		locations = new Location[] {new Location(skyWorld, 64, 64, 0), new Location(skyWorld, 32, 64, 32), new Location(skyWorld, 0, 64, 64), new Location(skyWorld, -32, 64, 32), new Location(skyWorld, -64, 64, 0), new Location(skyWorld, -32, 64, -32), new Location(skyWorld, 0, 64, -64), new Location(skyWorld, 32, 64, -32)};
