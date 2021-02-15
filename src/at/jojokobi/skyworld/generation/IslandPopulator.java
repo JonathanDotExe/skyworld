@@ -51,7 +51,7 @@ public class IslandPopulator extends BlockPopulator {
 			}
 		}
 		else if (world.getEnvironment() == Environment.NETHER){
-			if ((chunk.getX() < -1) || (chunk.getX()>1) || (chunk.getZ() < -1) || (chunk.getX() > 1)){
+			if ((chunk.getX() < -1) || (chunk.getX() > 1) || (chunk.getZ() < -1) || (chunk.getX() > 1)){
 				Random random = new Random();
 				if (random.nextInt(8) == 2){
 					Island island = islandsNether[random.nextInt(islandsNether.length)];
