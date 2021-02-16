@@ -15,9 +15,11 @@ public class SkyWorldPlugin extends JavaPlugin{
 	
 	@Override
 	public void onEnable(){
-		spawner = new PlayerSpawnSetter(Bukkit.getWorlds().get(0));
-		getServer().getPluginManager().registerEvents(spawner, this);
-		spawner.load();
+		Bukkit.getScheduler().runTask(this, () -> {
+			spawner = new PlayerSpawnSetter(Bukkit.getWorlds().get(0));
+			getServer().getPluginManager().registerEvents(spawner, this);
+			spawner.load();
+		});
 	}
 	
 	@Override

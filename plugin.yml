@@ -1,6 +1,6 @@
 name: SkyWorld
 main: at.jojokobi.skyworld.SkyWorldPlugin
 version: 1.4
+author: jojokobi
 api-version: 1.16
 load: STARTUP
-commands: 

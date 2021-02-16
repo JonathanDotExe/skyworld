@@ -134,7 +134,7 @@ public class BasicGeneration {
 						place.getBlock().setType(block);
 					}
 					else if (zufall == 2){
-						place.getBlock().setType(Material.NETHER_BRICK);
+						place.getBlock().setType(Material.NETHER_BRICKS);
 					}
 					else{
 						place.getBlock().setType(Material.NETHER_QUARTZ_ORE);

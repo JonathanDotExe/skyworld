@@ -19,14 +19,14 @@ import java.util.ArrayList;
 public class PlayerSpawnSetter implements Listener {
 	
 	private Location[] locations;
-	private ArrayList <String> classic = new ArrayList <String> ();
-	private ArrayList <String> farm = new ArrayList <String> ();
-	private ArrayList <String> dungeon = new ArrayList <String> ();
-	private ArrayList <String> mine = new ArrayList <String> ();
-	private ArrayList <String> llama = new ArrayList <String> ();
-	private ArrayList <String> forest = new ArrayList <String> ();
-	private ArrayList <String> rainbow = new ArrayList <String> ();
-	private ArrayList <String> house = new ArrayList <String> ();
+	private ArrayList<String> classic = new ArrayList <String> ();
+	private ArrayList<String> farm = new ArrayList <String> ();
+	private ArrayList<String> dungeon = new ArrayList <String> ();
+	private ArrayList<String> mine = new ArrayList <String> ();
+	private ArrayList<String> llama = new ArrayList <String> ();
+	private ArrayList<String> forest = new ArrayList <String> ();
+	private ArrayList<String> rainbow = new ArrayList <String> ();
+	private ArrayList<String> house = new ArrayList <String> ();
 			
 	public PlayerSpawnSetter (World skyWorld){
 		locations = new Location[] {new Location(skyWorld, 64, 70, 0), new Location(skyWorld, 32, 70, 32), new Location(skyWorld, 0, 70, 64), new Location(skyWorld, -32, 70, 32), new Location(skyWorld, -64, 70, 0), new Location(skyWorld, -32, 70, -32), new Location(skyWorld, 0, 70, -64), new Location(skyWorld, 32, 70, -32)};

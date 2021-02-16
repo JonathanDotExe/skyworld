@@ -8,7 +8,7 @@ import org.bukkit.World;
 import org.bukkit.World.Environment;
 import org.bukkit.block.Biome;
 
-import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 
@@ -36,6 +36,6 @@ public class SkyWorldOverworldGenerator extends ChunkGenerator implements Listen
 	
 	@Override
 	public List<BlockPopulator> getDefaultPopulators(World world) {
-		return new ArrayList<>();
+		return Arrays.asList(new IslandPopulator());
 	}
 }
