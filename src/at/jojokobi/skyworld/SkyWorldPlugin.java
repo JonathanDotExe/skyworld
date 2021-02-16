@@ -1,7 +1,7 @@
 package at.jojokobi.skyworld;
 
-import org.bukkit.World;
-import org.bukkit.WorldCreator;
+import org.bukkit.Bukkit;
+import org.bukkit.generator.ChunkGenerator;
 import org.bukkit.plugin.java.JavaPlugin;
 import at.jojokobi.skyworld.generation.SkyWorldOverworldGenerator;
 
@@ -11,14 +11,11 @@ import at.jojokobi.skyworld.generation.SkyWorldOverworldGenerator;
  */
 public class SkyWorldPlugin extends JavaPlugin{
 	
-	private World skyWorld;
 	private PlayerSpawnSetter spawner;
-	private SkyWorldOverworldGenerator gen = new SkyWorldOverworldGenerator();
 	
 	@Override
 	public void onEnable(){
-		generate();
-		spawner = new PlayerSpawnSetter(skyWorld);
+		spawner = new PlayerSpawnSetter(Bukkit.getWorlds().get(0));
 		getServer().getPluginManager().registerEvents(spawner, this);
 		spawner.load();
 	}
@@ -33,12 +30,9 @@ public class SkyWorldPlugin extends JavaPlugin{
 		}
 	}
 	
-	private void generate(){
-		//Overworld
-		WorldCreator generator = new WorldCreator("skyworld");
-		generator.generator(gen);
-		skyWorld = this.getServer().createWorld(generator);
-		skyWorld.setSpawnLocation(64, 70, 0);
+	@Override
+	public ChunkGenerator getDefaultWorldGenerator(String worldName, String id) {
+		return new SkyWorldOverworldGenerator();
 	}
 	
 }
