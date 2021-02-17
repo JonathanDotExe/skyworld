@@ -77,7 +77,7 @@ public class IslandPopulator extends BlockPopulator {
 	@Override
 	public void populate(World world, Random rand, Chunk chunk) {
 		if (world.getEnvironment() == Environment.NORMAL){
-			if ((chunk.getX() < -1) || (chunk.getX() > 1) || (chunk.getZ() < -1) || (chunk.getX() > 1)){
+			if ((chunk.getX() < -4) || (chunk.getX() > 4) || (chunk.getZ() < -4) || (chunk.getX() > 4)){
 				Random random = new Random();
 				if (random.nextInt(8) == 2){
 					Island island = islands[random.nextInt(islands.length)];
@@ -92,7 +92,7 @@ public class IslandPopulator extends BlockPopulator {
 			}
 		}
 		else if (world.getEnvironment() == Environment.NETHER){
-			if ((chunk.getX() < -1) || (chunk.getX() > 1) || (chunk.getZ() < -1) || (chunk.getX() > 1)){
+			if ((chunk.getX() < -4) || (chunk.getX() > 4) || (chunk.getZ() < -4) || (chunk.getX() > 4)){
 				Random random = new Random();
 				if (random.nextInt(8) == 2){
 					Island island = islandsNether[random.nextInt(islandsNether.length)];
