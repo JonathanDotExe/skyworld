@@ -104,8 +104,11 @@ public class IslandPopulator extends BlockPopulator {
 			}
 		}
 		else {
-			endIsland.build(new Location(world, -1, 64, -1));
-			enderPortalIsland.build(new Location(world, -4, 64, 64));
+			//Spawn
+			if (chunk.getX() == 0 && chunk.getZ() == 0) {
+				endIsland.build(new Location(world, -1, 64, -1));
+				enderPortalIsland.build(new Location(world, -4, 64, 64));
+			}
 		}
 	}	
 	
