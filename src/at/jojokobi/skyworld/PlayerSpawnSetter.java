@@ -30,6 +30,9 @@ public class PlayerSpawnSetter implements Listener {
 			
 	public PlayerSpawnSetter (World skyWorld){
 		locations = new Location[] {new Location(skyWorld, 64, 70, 0), new Location(skyWorld, 32, 70, 32), new Location(skyWorld, 0, 70, 64), new Location(skyWorld, -32, 70, 32), new Location(skyWorld, -64, 70, 0), new Location(skyWorld, -32, 70, -32), new Location(skyWorld, 0, 70, -64), new Location(skyWorld, 32, 70, -32)};
+		for (Location loc : locations) {
+			loc.add(2, 0, 2);
+		}
 	}
 	
 	@EventHandler

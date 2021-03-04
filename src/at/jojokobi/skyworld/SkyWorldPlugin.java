@@ -3,7 +3,7 @@ package at.jojokobi.skyworld;
 import org.bukkit.Bukkit;
 import org.bukkit.generator.ChunkGenerator;
 import org.bukkit.plugin.java.JavaPlugin;
-import at.jojokobi.skyworld.generation.SkyWorldOverworldGenerator;
+import at.jojokobi.skyworld.generation.SkyWorldGenerator;
 
 //{"biome":"minecraft:ocean", "layers":[{"block":"minecraft:air", "height":1}]}
 /*
@@ -34,7 +34,7 @@ public class SkyWorldPlugin extends JavaPlugin{
 	
 	@Override
 	public ChunkGenerator getDefaultWorldGenerator(String worldName, String id) {
-		return new SkyWorldOverworldGenerator();
+		return new SkyWorldGenerator();
 	}
 	
 }

@@ -13,11 +13,11 @@ import java.util.List;
 import java.util.Random;
 
 
-public class SkyWorldOverworldGenerator extends ChunkGenerator implements Listener{
+public class SkyWorldGenerator extends ChunkGenerator implements Listener{
 	
 	public static final int CHUNK_SIZE = 16;
 	
-	public SkyWorldOverworldGenerator() {
+	public SkyWorldGenerator() {
 		
 	}
 	
@@ -27,7 +27,7 @@ public class SkyWorldOverworldGenerator extends ChunkGenerator implements Listen
 		for (int i = 0; i < CHUNK_SIZE; i++) {
 			for (int j = 0; j < CHUNK_SIZE; j++) {
 				for (int k = 0; k < 256; k++) {
-					biome.setBiome(i, k, j, world.getEnvironment() == Environment.NORMAL ? Biome.PLAINS : Biome.NETHER_WASTES);
+					biome.setBiome(i, k, j, world.getEnvironment() == Environment.NORMAL ? Biome.PLAINS : (world.getEnvironment() == Environment.THE_END ? Biome.THE_END : Biome.NETHER_WASTES));
 				}
 			}
 		}

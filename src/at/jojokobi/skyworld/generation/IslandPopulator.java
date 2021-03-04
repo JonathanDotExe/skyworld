@@ -91,7 +91,7 @@ public class IslandPopulator extends BlockPopulator {
 				middleIsland.build(new Location(world, -1, 64, -1));
 			}
 		}
-		else if (world.getEnvironment() == Environment.NETHER){
+		else if (world.getEnvironment() == Environment.NETHER) {
 			if ((chunk.getX() < -4) || (chunk.getX() > 4) || (chunk.getZ() < -4) || (chunk.getX() > 4)){
 				Random random = new Random();
 				if (random.nextInt(8) == 2){
